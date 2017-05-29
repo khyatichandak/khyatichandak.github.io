@@ -1,0 +1,85 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 29, 2017, 11:58:08 AM
+    Author     : Khyati Chandak
+*/
+
+body{
+    background-image: url('../images/1.jpg');
+    color: #fff;
+    overflow: auto;
+}
+.navbar {
+    margin-bottom: 0;
+    background-color: #FFF;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+}
+
+.navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+}
+
+.navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #1abc9c !important;
+    background-color: #fff !important;
+    border-bottom: 2px solid #1abc9c;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+}
+
+.navbar-brand-centered {
+    position: absolute;
+    left: 50%;
+    display: block;
+    width: 160px;
+    text-align: center;
+    background-color: transparent;
+}
+.navbar>.container .navbar-brand-centered, 
+.navbar>.container-fluid .navbar-brand-centered {
+    margin-left: -80px;
+}
+nav{
+    background: transparent !important;
+}
+.tab-content .container{
+    margin-top: 80px;
+    padding: 20px;
+    /*background-color: #204d74;*/
+}
+.about-content{
+    -ms-transform: rotate(-5deg);  /*IE 9*/ 
+    -webkit-transform: rotate(-5deg);  /*Safari*/ 
+    transform: rotate(-5deg);
+    position: absolute;
+    box-shadow: 5px 0px 5px darkgrey;
+    padding: 15px;
+    margin-top: 20px;
+
+}
+.about-content-inner{
+    border: double #FFF 2px;
+    padding: 15px;
+    font-family: "Century Gothic";
+}
+a{
+    color: #fff;
+    text-decoration: none;
+}
+a:hover, a:active{
+    color: turquoise;
+    text-decoration: none;
+}
+
