@@ -3,22 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-//$('.score-php').tooltip();
-//$(document).ready(function () {
-////    $(".score-php").html("");
-//    $(".score-php").mouseover(function () {
-//        $(this).html("Hello");
-//    });
-//    $(".score-php").mouseenter(function () {
-//        $(this).html("Hello");
-//    });
-//    $(".score-php").mouseout(function () {
-//        $(this).html("");
-//    });
-//    $(".score-php").mouseleave(function () {
-//        $(this).html("");
-//    });
-//});
 
 var TxtType = function (el, toRotate, period) {
     this.toRotate = toRotate;
