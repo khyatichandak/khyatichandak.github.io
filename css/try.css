@@ -7,18 +7,50 @@ and open the template in the editor.
     Created on : May 29, 2017, 11:58:08 AM
     Author     : Khyati Chandak
 */
+@font-face {
+    font-family: 'Moon-Bold';
+    font-weight: bold;
+    src: url('Moon Bold.otf');
+}
+/*@font-face {
+    font-family: 'Bradleys-Pen';
+    font-weight: bold;
+    src: url('Bradleys Pen.ttf');
+}*/
+@font-face {
+    font-family: 'Handmade';
+    font-weight: bold;
+    src: url('A-HandMade-Font.ttf.woff');
+}
+/*@font-face {
+    font-family: 'Ampersand';
+    font-weight: bold;
+    src: url('Ampersand.ttf.woff');
+}*/
 
 body{
     background-image: url('../images/1.jpg');
     color: #fff;
     overflow: auto;
 }
+h3{
+    margin-top: 0px;
+}
+h1{
+    font-family: 'Handmade';
+}
+a, a:hover, a:active, a:visited{
+    color: turquoise;
+    text-decoration: none;
+}
+
+/* ============ MENU BAR ========= */
 .navbar {
     margin-bottom: 0;
-    background-color: #FFF;
     z-index: 9999;
     border: 0;
     font-size: 12px !important;
+    font-weight: 700;
     line-height: 1.42857143 !important;
     letter-spacing: 4px;
     border-radius: 0;
@@ -28,17 +60,23 @@ body{
     color: #fff !important;
 }
 
-.navbar-nav li a:hover, .navbar-nav li.active a {
-    color: #1abc9c !important;
-    background-color: #fff !important;
-    border-bottom: 2px solid #1abc9c;
+.navbar-nav li a:hover,.navbar-nav li .active, .navbar-nav li.active a {
+    background-color: darkcyan !important; /*darkgrey,cadetblue, grey,*/
 }
 
 .navbar-default .navbar-toggle {
     border-color: transparent;
     color: #fff !important;
+    background-color: cyan !important;
 }
-
+.navbar-brand{
+    padding: 0px;
+    line-height: 50px;
+}
+.navbar-brand img{
+    float: left;
+    height: 50px;
+}
 .navbar-brand-centered {
     position: absolute;
     left: 50%;
@@ -52,34 +90,420 @@ body{
     margin-left: -80px;
 }
 nav{
-    background: transparent !important;
+    background-color: grey !important;
 }
+/* ============ MENU BAR END ========= */
+
+/* ============ TAB CONTENT ========= */
 .tab-content .container{
-    margin-top: 80px;
+    margin-top: 50px;
     padding: 20px;
-    /*background-color: #204d74;*/
 }
-.about-content{
+@media (max-width : 378px){
+    .tab-content{
+        margin-top: 90px;
+    }
+}
+.main-content{
+    text-align: center;
+    background-color: #204d74;
+    color: #fff;
+    z-index: 1;
+    padding: 50px 50px 50px 50px;
+}
+@media (max-width : 768px){
+    .main-content{
+        padding: 50px 10px 10px 10px;
+    }
+}
+.main-content h2{
+    text-align: center;
+    display: inline-block;
+    border-bottom: double 3px cyan;
+    margin-bottom: 40px;
+}
+/* ============ TAB CONTENT END ========= */
+
+/* ============ HEADER IMAGE ========= */
+#about-me, #my-work, #contact{
+    text-align: center;    
+}
+.header-img{
+    text-align: center;    
+    margin-bottom: -50px;
+    z-index: 2;
+    height: 130px;
+    width: 130px;
+    border-radius: 100px;
+    border: solid 3px #fff;
+}
+/* ============ HEADER IMAGE END ========= */
+
+/* ============ HOME ========= */
+#home{
+    padding-top: 100px;
+}
+#home .col-md-7{
+    /*height: 500px;*/ 
+    height: auto;
+    z-index: 1; 
+    vertical-align: middle; 
+    /*right: 50px;*/
+    padding: 0px 100px 30px 10px;
+}
+#home .col-md-7 img{
+    width: 100%;
+}
+.home-content{
     -ms-transform: rotate(-5deg);  /*IE 9*/ 
     -webkit-transform: rotate(-5deg);  /*Safari*/ 
     transform: rotate(-5deg);
-    position: absolute;
+    /*position: absolute;*/
     box-shadow: 5px 0px 5px darkgrey;
     padding: 15px;
     margin-top: 20px;
-
+    background-color: #204d74; 
+    position: relative;
+    top: 30px;
+    left: 150px; 
+    z-index: 2; 
+    /*width: 450px;*/
+    width: 100%;
+    max-width: 480px;
+    /*min-width: 404px;*/
 }
-.about-content-inner{
-    border: double #FFF 2px;
+.home-content-inner{
+    border: double #FFF 4px;
     padding: 15px;
     font-family: "Century Gothic";
 }
-a{
-    color: #fff;
-    text-decoration: none;
+
+.home-content-inner h2{
+    background-color: turquoise;
+    display: inline-block;
+    padding: 5px 5px 15px 5px;
+    clip-path:polygon(0 0,100% 0, 100% 70%, 40% 70%,20% 100%, 30% 70%,0 70%);
 }
-a:hover, a:active{
-    color: turquoise;
-    text-decoration: none;
+.home-content-inner div:nth-of-type(odd){
+    width: 30%; 
+    float: left;
+    font-weight: bold;
+}
+@media (min-width: 768px) and (max-width : 991px){
+    .home-content {
+        top: 0px;
+        left: 50px;
+    }
+    #home .col-md-7 {
+        padding: 40px 20px 0px 0px;
+    }
+}
+@media (max-width : 767px){
+    .home-content {
+        top: 0px;
+        left: 0px;
+        /*padding: 10px 20px 0px 20px;*/
+    }
+    #home .col-md-7 {
+        padding: 0px 20px 10px 20px;
+    }
+}
+.social-icons{
+    position: absolute;
+    bottom:15%;
+    right:19%;
+    z-index: 2;
+    display: block;
+}
+.social-icons a{
+    color: cyan;
+    font-size: 20px;
+    padding: 6px;
+    line-height: 0px;
+}
+/* ============ HOME END ========= */
+
+
+/* ============ ABOUT ME ========= */
+
+/*.row>div{
+    height: 130px; 
+    width: 130px; 
+    border-radius: 100px;
+    background-position: center; 
+    background-size: contain; 
+    float: left;
+}
+.row>div>div{
+    background: transparent; 
+    height: 130px; 
+    width: 130px; 
+    border-radius: 100px; 
+    border: aqua 8px solid;
+    box-shadow: inset 0px 0px 100px cyan;
+    opacity: 0.7;
+}
+.bg-php{
+    background-image: url('../images/imageedit_44_8049597308.gif'); 
+}
+.score-php{
+    clip-path:polygon(50% 50%, 50% 0,100% 0, 100% 100%, 0 100%, 0 20%);
+    clip-path: polygon(0 20%, 100% 20%, 100% 100%,0 100%);
+    text-align: center;
+    font-size: 25px;
+    vertical-align: middle;
+    opacity: 0;
+}
+.score-php:hover{
+    clip-path:polygon(0 0,100% 0, 100% 100%, 0 100%);
+    background-color: cyan;
+    border: cyan 8px solid;
+    box-shadow: inset 0px 0px 100px cyan;
+    opacity: 0.8;
+    font-size: 25px;
+    vertical-align: middle;
+    text-align: center;
+    color: #fff;
+    z-index: 5;
+}
+.bg-mysql{
+    background-image: url('../images/imageedit_46_4954762447.gif');
+}
+.score-mysql{
+    clip-path:polygon(50% 50%, 50% 0,100% 0, 100% 100%, 0 100%, 0 20%);
+    clip-path: polygon(0 20%, 100% 20%, 100% 100%,0 100%);
+}
+.bg-js{
+    background-image: url('../images/imageedit_48_5027164466.gif');
+}
+.score-js{
+    clip-path:polygon(50% 50%, 50% 0,100% 0, 100% 100%, 0 100%, 0 25%);
+    clip-path: polygon(0 25%, 100% 25%, 100% 100%,0 100%);
+}
+.bg-jquery{
+    background-image: url('../images/imageedit_59_2988920986.gif');
+}
+.score-jquery{
+    clip-path:polygon(50% 50%, 50% 0,100% 0, 100% 100%, 15% 100%);
+    clip-path: polygon(0 45%, 100% 45%, 100% 100%,0 100%);
+}
+.bg-bootstrap{
+    background-image: url('../images/imageedit_61_3144299861.gif');
+}
+.score-bootstrap{
+    clip-path:polygon(50% 50%, 50% 0,100% 0, 100% 100%, 0 100%, 0 20%);
+    clip-path: polygon(0 30%, 100% 30%, 100% 100%,0 100%);
+}
+.bg-html5{
+    background-image: url('../images/imageedit_63_4729278299.gif'); 
+}
+.score-html5{
+    clip-path:polygon(50% 50%, 50% 0,100% 0, 100% 100%, 0 100%, 0 30%);
+    clip-path: polygon(0 25%, 100% 25%, 100% 100%,0 100%);
+}
+.bg-css3{
+    background-image: url('../images/imageedit_65_8241682507.gif');
+}
+.score-css3{
+    clip-path:polygon(50% 50%, 50% 0,100% 0, 100% 100%, 0 100%, 0 50%);
+    clip-path: polygon(0 35%, 100% 35%, 100% 100%,0 100%);
+}
+.bg-angular{
+    background-image: url('../images/imageedit_67_6401826370.gif');
+}
+.score-angular{
+    clip-path:polygon(50% 50%, 50% 0,100% 0, 100% 100%, 0 100%, 0 90%);
+    clip-path: polygon(0 25%, 100% 25%, 100% 100%,0 100%);
+}
+.percentage{
+    height: 130px;
+    width: 130px;
+    font-size: 25px; 
+    line-height: 180px; 
+    color: wheat;
+    z-index: 5;
+}*/
+
+#about-me .col-md-12{
+    text-align: left;
+    font-family: "Century Gothic";
+    font-size: 15px;
+}
+#about-me .col-md-12 img{
+    float: left;
+    height: 40px;
+    /*margin-bottom: 5px;*/
+    margin-right: 5px;
 }
 
+/* ----- PROGRESS BAR ----- */
+.progress-bar {
+    transition-duration: 3s;
+    text-align: left;
+    font-size: 12px;
+    font-weight: normal;
+    font-family: 'Moon-Bold';
+    background-color: gold;
+}
+.progress {
+    border-radius: 0px;
+    /*margin: 0px;*/
+    
+/*    border: dashed 1px gold;
+    padding: 15px;*/
+}
+.progress .skill {
+    padding: 0;
+    margin: 0 0 0 20px;
+    text-transform: uppercase;
+    color: black;
+    font-size: 18px;
+}
+/*.progress-section>div{
+    border: dashed 1px gold;
+    padding: 15px;
+}*/
+.progress-section{
+    font-size: 18px;
+    font-weight: normal;
+    font-family: 'Moon-Bold';
+    /*color: #000;*/
+}
+.progress-section button{
+    margin: 2px;
+    padding: 6px !important;
+    border-radius: 10px !important;
+    border: solid 2px cyan !important;
+    background-color: #204d74;
+}
+.progress-inner{
+    margin: 5px 0 5px 0;
+    border: dashed 1px cyan;
+    padding: 10px;
+    /*background-color: silver;*/
+}
+.progress-inner .full{
+    background-color: cyan;
+}
+/* ----- PROGRESS BAR END ----- */
+
+
+/* ============ ABOUT ME END ========= */
+
+/* ============ MY WORK ========= */
+
+#my-work .col-md-4{
+    padding: 15px !important;
+}
+/* ----- SECOND EFFECTS ----- */
+
+.view {
+    float: none;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+}
+.view .mask, .view .content {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+}
+.view img {
+    display: block;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+@media (min-width: 768px) and (max-width : 991px){
+    .view img  {
+        height: 167px;
+    }
+}
+.second-effect .mask {
+    opacity: 0;
+    overflow:visible;
+    border:0px solid rgba(0,0,0,0.7);
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+    -o-box-sizing:border-box;
+    -ms-box-sizing:border-box;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    text-align:center;
+    width:100%;
+    height:100%;
+}
+.second-effect:hover .mask {
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.45);
+    border:60px solid rgba(35, 214, 231, 0.64);
+}
+/*@media (min-width: 768px) and (max-width : 991px){
+    .second-effect:hover .mask {
+        border:120px solid rgba(35, 214, 231, 0.64);
+    }
+}*/
+/*@media (min-width: 430px) and (max-width : 767px){
+    .second-effect:hover .mask {
+        border:100px solid rgba(35, 214, 231, 0.64);
+    }
+}*/
+.second-effect .mask p {
+    font-size:1em;
+    color: #fff;
+    padding: 1em 0 0;
+    display: inline-block;
+}
+@media (min-width: 768px) and (max-width : 991px){
+    .row .mask:nth-child(5)>p,.row .mask:nth-child(6)>p {
+        padding:0 0 0;
+    }
+}
+
+/* ----- SECOND EFFECTS END ----- */
+
+
+/* ============ MY WORK END ========= */
+
+/* ============ CONTACT ========= */
+
+.contact-footer, .form{
+    font-family: "Century Gothic";
+    font-size: 15px;
+    padding: 0px 60px 0px 60px;
+}
+@media (max-width : 450px){
+    .contact-footer,.form {
+        padding: 0px 40px 0px 40px;
+    }
+}
+.glyphicon{
+    color: cyan;
+    margin-right: 15px;
+}
+.contact-footer h4{
+    padding-bottom: 10px;
+    font-weight: bolder;
+}
+/*#map { 
+    width: 100%;
+    position:fixed;
+    z-index: 0;
+}*/
+input, button, textarea, .btn{
+    border-radius: 0px !important;
+}
+#submit{
+    background-color: cyan !important;
+    border-radius: 0px !important;
+    border: 0px !important;
+    color: darkblue !important;
+    text-transform: uppercase !important;
+    font-weight: bold !important;
+}
+/* ============ CONTACT END ========= */
