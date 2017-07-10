@@ -29,7 +29,12 @@ and open the template in the editor.
 }*/
 
 body{
-    background-image: url('../images/1.jpg');
+    background: url('../images/1.jpg') no-repeat;
+    /*background-repeat: no-repeat;*/
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     color: #fff;
     overflow: auto;
 }
@@ -348,9 +353,9 @@ nav{
 .progress {
     border-radius: 0px;
     /*margin: 0px;*/
-    
-/*    border: dashed 1px gold;
-    padding: 15px;*/
+
+    /*    border: dashed 1px gold;
+        padding: 15px;*/
 }
 .progress .skill {
     padding: 0;
