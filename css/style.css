@@ -166,12 +166,15 @@ nav{
     padding: 15px;
     font-family: "Century Gothic";
 }
-
-.home-content-inner h2{
-    background-color: turquoise;
-    display: inline-block;
-    padding: 5px 5px 15px 5px;
-    clip-path:polygon(0 0,100% 0, 100% 70%, 40% 70%,20% 100%, 30% 70%,0 70%);
+.home-content-inner svg{
+    margin: 18px 5px 5px 0px;
+}
+.home-content-inner polygon{
+    fill:turquoise;
+    fill-rule:evenodd;
+}
+.home-content-inner text{
+    font-size: 30px;
 }
 .home-content-inner div:nth-of-type(odd){
     width: 30%; 
@@ -210,7 +213,6 @@ nav{
     line-height: 0px;
 }
 /* ============ HOME END ========= */
-
 
 /* ============ ABOUT ME ========= */
 
@@ -265,7 +267,6 @@ nav{
     background-color: cyan;
 }
 /* ----- PROGRESS BAR END ----- */
-
 
 /* ============ ABOUT ME END ========= */
 
