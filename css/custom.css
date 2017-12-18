@@ -1,0 +1,541 @@
+/* ====== COMMON ====== */
+body{
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    color: #fff;
+    overflow: auto;
+}
+a{
+    color: steelblue;
+}
+input, button, textarea, .btn{
+    border-radius: 0px !important;
+}
+button{
+    background: white !important;
+    font-weight: bold !important;
+    color: steelblue !important;
+}
+.btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn.active.focus{
+    background-color: aliceblue !important;
+}
+#one, #two, #three, #four{
+    text-align: center;
+    vertical-align: middle;
+    display: block;
+    height: auto;
+    min-height: 100%; 
+    width: 100%; 
+    top: 0px;
+    left: 0px; 
+    position: absolute;
+    border-right: solid 2px grey;
+    border-left: solid 2px grey;
+    font-family: 'Open Sans', sans-serif;
+    color: #000000;
+    background-image: url('../images/background.jpg');
+    background-repeat: no-repeat;
+    background-size: inherit;
+}
+#one{
+    z-index: 40;
+    color: #fff;
+}
+#two{
+    z-index: 30;
+    background-color: #fff;
+    color: #72c9b9;
+}
+#three{
+    z-index: 20;
+    background-color: #fff;
+    color:#72c9b9;
+}
+#four{
+    z-index: 10;
+    background-color: #fff;
+    color: #72c9b9;
+}
+#two .container,#three .container,#four .container{
+    color: #000;
+    padding-top:8%;
+    padding-bottom: 5%;
+}
+/* ====== COMMON END ====== */
+/* ===== MENU BAR ===== */
+@media(min-width:768px){
+    .navbar-default .navbar-nav>li>a{
+        font-size: 40px;
+        letter-spacing: 0px;
+        color: steelblue !important;
+        font-weight: bold;
+        background-color: transparent;
+        transition: letter-spacing 2s, color 2s, font-size 2s, margin-top 2s, margin-left 2s, margin-right 2s;
+        -webkit-transition: letter-spacing 2s, color 2s, font-size 2s, margin-top 2s, margin-left 2s, margin-right 2s;
+    }
+    .navbar-default .navbar-nav>.active>a,.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus{
+        background-color: transparent;
+        letter-spacing: 8px;
+        color: #fbfbfb !important;
+        font-size: 40px;
+    }
+    .navbar-default .navbar-nav>.active>a{
+        background-color: transparent !important;
+        margin-top:25px;
+        margin-left: -144px;
+        margin-right: -144px;
+    }
+}
+@media(max-width:767px){
+    .navbar-default .navbar-nav>li>a{
+        font-size: 40px;
+        letter-spacing: 0px;
+        color: steelblue !important;
+        font-weight: bold;
+        background-color: transparent;
+        transition: letter-spacing 2s, color 2s, font-size 2s;
+        -webkit-transition: letter-spacing 2s, color 2s, font-size 2s;
+    }
+    .navbar-default .navbar-nav>.active>a,.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus{
+        background-color: transparent;
+        letter-spacing: 8px;
+        color: #000 !important;
+        font-size: 40px;
+    }
+    .navbar-default .navbar-nav>.active>a{
+        background-color: transparent !important;
+    }
+}
+.navbar-default .navbar-nav>.container{
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    color: steelblue !important;
+}
+.navbar-default{
+    background-color: transparent;
+    border-color: transparent;
+}
+.navbar-nav >li >a{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+/* ===== MENU BAR END ===== */
+/* ====== HOME ====== */
+#one-msg, #two-msg, #three-msg, #four-msg, #five-msg, #six-msg{
+    color: #000;
+    font-size: 20px;
+    background-image: url('../images/wood-home-steps.png');
+    background-repeat: no-repeat;
+    color: gold;
+    font-size: 14px;
+    font-weight: bold;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+#start-msg{
+    color: gold;
+    font-size: 18px;
+    background-image: url('../images/wood-home-start.png');
+    background-repeat: no-repeat;
+    width: 125px !important;
+    height: 72px !important;
+    padding-top: 14px;
+    background-size: 125px;
+    cursor: pointer;
+    padding-left: 11px;
+    padding-right: 29px;
+    line-height: 1;
+}
+#one-msg{
+    width: 140px !important;
+    height: 75px !important;
+    padding-top: 20px;
+    background-size: 140px;
+}
+#two-msg{
+    width: 130px !important;
+    height: 70px !important;
+    padding-top: 16px;
+    background-size: 130px;
+}
+#three-msg{
+    width: 120px !important;
+    height: 60px !important;
+    padding-top: 13px;
+    background-size: 120px;
+}
+#four-msg{
+    width: 120px !important;
+    height: 70px !important;
+    padding-top: 12px;
+    background-size: 120px;
+}
+#five-msg{
+    width: 140px !important;
+    height: 80px !important;
+    padding-top: 17px;
+    background-size: 140px;
+}
+#six-msg{
+    width: 110px !important;
+    height: 60px !important;
+    padding-top: 10px;
+    background-size: 110px;
+}
+#end-msg{
+    color: gold;
+    font-size: 18px;
+    background-image: url('../images/wood-home-end.png');
+    background-repeat: no-repeat;
+    width: 125px !important;
+    height: 60px !important;
+    padding-top: 8px;
+    background-size: 125px;
+    line-height: 1;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+#one img{
+    border-radius: 100px;
+    height: 70px;
+    z-index: 500;
+    position: absolute;
+    margin-top: 20px;
+    margin-left: -18px;
+    left: 2%;
+    top: 42%;
+}
+
+@media (min-width: 1050px) and (max-width : 1353px){
+    #one-msg{
+        left: 13% !important;
+    }
+    #three-msg{
+        left: 39% !important;
+    }
+    #four-msg{
+        left: 51% !important;
+    }
+    #five-msg{
+        left: 63% !important;
+    }
+    #six-msg{
+        left: 76% !important;
+    }
+    #end-msg{
+        left: 87% !important;
+    }
+}
+@media (max-width: 1049px){
+    #start-msg{
+        width: 110px !important;
+        background-size: 110px;
+        line-height: 0.8;
+    }
+    #one-msg{
+        width: 135px !important;
+        background-size: 135px;
+        padding-top: 16px;
+    }
+    #two-msg{
+        width: 115px !important;
+        background-size: 115px;
+        padding-top: 11px;
+    }
+    #three-msg{
+        width: 105px !important;
+        background-size: 105px;
+        padding-top: 9px;
+    }
+    #four-msg{
+        width: 105px !important;
+        background-size: 105px;
+        padding-top: 7px;
+    }
+    #five-msg{
+        width: 135px !important;
+        background-size: 135px;
+        padding-top: 15px;
+    }
+    #six-msg{
+        width: 93px !important;
+        background-size: 93px;
+        padding-top: 4px;
+    }
+    #end-msg{
+        width: 100px !important;
+        background-size: 100px;
+        padding-top: 9px;
+        line-height: 0.8;
+    }
+}
+@media (max-width: 1049px) and (min-width : 900px){
+    #start-msg{
+        width: 110px !important;
+        background-size: 110px;
+        line-height: 0.8;
+    }
+    #one-msg{
+        left: 13% !important;
+        width: 135px !important;
+        background-size: 135px;
+        padding-top: 16px;
+    }
+    #two-msg{
+        left: 27% !important;
+        width: 115px !important;
+        background-size: 115px;
+        padding-top: 11px;
+    }
+    #three-msg{
+        left: 40% !important;
+        width: 105px !important;
+        background-size: 105px;
+        padding-top: 9px;
+    }
+    #four-msg{
+        left: 52% !important;
+        width: 105px !important;
+        background-size: 105px;
+        padding-top: 7px;
+    }
+    #five-msg{
+        left: 64% !important;
+        width: 135px !important;
+        background-size: 135px;
+        padding-top: 15px;
+    }
+    #six-msg{
+        left: 78% !important;
+        width: 93px !important;
+        background-size: 93px;
+        padding-top: 4px;
+    }
+    #end-msg{
+        left: 88% !important;
+        width: 100px !important;
+        background-size: 100px;
+        padding-top: 9px;
+        line-height: 0.8;
+    }
+}
+
+@media (max-width : 899px) and (min-width : 600px){
+    #one img{
+        left: 2%;
+        top : 15%;
+    }
+    #start-msg{
+        left: 2% !important;
+        top : 15% !important;
+    }
+    #one-msg{
+        left: 29% !important;
+        top : 15% !important;
+    }
+    #two-msg{
+        left: 57% !important;
+        top : 21% !important;
+    }
+    #three-msg{
+        left: 80% !important;
+        top : 38% !important;
+    }
+    #four-msg{
+        left: 49% !important;
+        top : 45% !important;
+    }
+    #five-msg{
+        left: 14% !important;
+        top : 53% !important;
+    }
+    #six-msg{
+        left: 43% !important;
+        top : 70% !important;
+    }
+    #end-msg{
+        left: 73% !important;
+        top : 74% !important;
+    }
+}
+@media (max-width : 767px){
+    .skills-block{
+        padding-top: 10%;
+    }
+}
+@media (max-width : 599px) and (min-width : 279px){
+    #one img{
+        left: 2%;
+        top : 15%;
+    }
+    #start-msg{
+        left: 2% !important;
+        top : 15% !important;
+    }
+    #one-msg{
+        left: 33% !important;
+        top : 17% !important;
+    }
+    #two-msg{
+        left: 51% !important;
+        top : 29% !important;
+    }
+    #three-msg{
+        left: 69% !important;
+        top : 40% !important;
+    }
+    #four-msg{
+        left: 42% !important;
+        top : 50% !important;
+    }
+    #five-msg{
+        left: 8% !important;
+        top : 60% !important;
+    }
+    #six-msg{
+        left: 33% !important;
+        top : 74% !important;
+    }
+    #end-msg{
+        left: 65% !important;
+        top : 81% !important;
+    }
+}
+/* ====== HOME END ====== */
+
+/* ====== IT'S ME ====== */
+.skills{
+    text-align: left;
+    color: #000;
+    border-bottom: solid 10px #054d6f7a;
+}
+.skills-block{
+    border-right: solid 1px lightgrey;
+}
+#two p, .experience-block p{
+    font-size: 20px;
+}
+.skillsList{
+    background: transparent !important;
+    border: transparent;
+    cursor: text;
+    font-size: 20px;
+    color: #000 !important;
+    display: none;
+    height: 15px;
+    width: 100%;
+}
+.skillsList:before{
+    left: 10%;
+    bottom: -10px;
+    width: 0%;
+    height: 5px;
+    background: #1cd8c9;
+    content: '';
+    position: absolute;
+    animation-name: rulerbar;
+    animation-duration: 7s;
+}
+@keyframes rulerbar{
+    100%{width:80%;}
+}
+/* ====== IT'S ME END ====== */
+
+/* ====== I DID ====== */
+#three div{
+    text-align: center;
+}
+.experience-block, .education-block{
+    min-height: 200px;
+    display: table;
+    margin-top:2%;
+}
+.education-block{
+    min-height: 200px;
+    display: table;
+    margin-top:5%;
+}
+.experience-block p, .education-block div{
+    display: table-cell;
+    vertical-align: middle;
+}
+.experience-block p{
+    box-shadow: lightgrey 0px 0px 25px inset;
+    background-color:#ffffff;
+}
+.box p{
+    text-align:center;
+    position:relative;
+    top:80px;
+}
+.box {
+    width:70%;
+    height:200px;
+    background:#FFF;
+    margin:40px auto;
+}
+.effect4{
+    position: relative;
+}
+.effect4:after{
+    z-index: -1;
+    position: absolute;
+    content: "";
+    bottom: 15px;
+    right: 10px;
+    left: auto;
+    width: 50%;
+    top: 80%;
+    max-width:300px;
+    background: #777;
+    box-shadow: 0 15px 10px #777;
+    transform: rotate(3deg);
+}
+/* ====== I DID END ====== */
+
+/* ====== SAY HI ====== */
+#four .container{
+    padding-left: 60px;
+    padding-right: 60px;
+}
+.form{
+    font-family: inherit;
+}
+.contact-section{
+    padding-top: 10px;
+    font-size:20px;
+    margin-top: 30px;
+    box-shadow: 0px 0px 10px 10px #0c94b175;
+}
+.contact-section a:hover, .contact-section a:active, .contact-section a:visited{
+    color: cyan;
+    text-decoration: none;
+    text-shadow: 1px 1px 30px steelblue, 1px 1px 30px steelblue;
+}
+.contact-section img{
+    height: 50px;
+}
+.glyphicon{
+    color: steelblue;
+    margin-right: 15px;
+    font-size: 50px;
+}
+#submit{
+    background-color: steelblue !important;
+    border-radius: 0px !important;
+    border: 0px !important;
+    color: #fff !important;
+    text-transform: uppercase !important;
+    font-weight: bold !important;
+}
+#submit:hover{
+    background-color: cyan !important;
+    color: darkblue !important;
+}
+.fa{
+    color: #fff !important;
+    font-size: 35px;
+}
+/* ====== SAY HI END ====== */
