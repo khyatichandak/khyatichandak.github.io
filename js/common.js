@@ -9,6 +9,13 @@ $(document).ready(function () {
         top: $("#start-msg").css('top')
     }, 0);
 });
+$(window).resize(function () {
+    if ($(window).width() < 768) {
+        $('.navbar-nav>li').on('click', function () {
+            $('.navbar-toggle').click();
+        });
+    }
+});
 $(document).on('click', '#btnOne', function () {
     $("#one .container").fadeIn();
     $("#two .container").fadeOut(1500);
@@ -63,6 +70,7 @@ $(document).on('click', '#start-msg', function () {
             left: '+=10%',
             top: $("#end-msg").css('top')
         }, 1500);
+//        $("#one img").attr("src", "images/bunny-rev.gif");
     }, 19000);
 
     setTimeout(function () {
