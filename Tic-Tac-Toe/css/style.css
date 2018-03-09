@@ -1,0 +1,50 @@
+body{
+    background-color: beige;
+    font-family: 'Century Gothic';
+}
+.mainBlock{
+    display: inline-block;
+    margin: 10% 0 0 40%;
+    width: auto;
+    height: auto;
+}
+h2{
+    color: darkblue;
+}
+h4{
+    color: steelblue;
+    text-align: center;
+}
+table{
+    border: none;
+}
+.btn-default{
+    height: 50px;
+    width: 50px;
+    margin: 0px;
+    font-size: 25px;
+    border-radius: 0px;
+    border: none;
+}
+tr:nth-of-type(1),tr:nth-of-type(2){
+    border-bottom: 2px solid grey;
+}
+
+td:nth-of-type(1),td:nth-of-type(2){
+    border-right: 2px solid grey;
+}
+.btn-block{
+    font-weight: bold;
+    font-size: 18px;
+}
+#signO{
+    color: limegreen;
+    font-weight: bold;
+}
+#signX{
+    color: gold;
+    font-weight: bold;
+}
+.alert{
+    font-size: 16px;
+}
