@@ -1,0 +1,59 @@
+﻿@model IEnumerable<S1G6_PVFAPP.Models.Product>
+
+@{
+    ViewBag.Title = "Index";
+}
+    <div class="container">
+        <h2>Index</h2>
+
+        <p>
+            @Html.ActionLink("Create New", "Create")
+        </p>
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.ProductDescription)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ProductName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ProductFinish)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ProductStandardPrice)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ProductLineID)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ProductDescription)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ProductName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ProductFinish)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ProductStandardPrice)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ProductLineID)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.ProductID }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.ProductID }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.ProductID })
+                    </td>
+                </tr>
+            }
+
+        </table>
+       </div>

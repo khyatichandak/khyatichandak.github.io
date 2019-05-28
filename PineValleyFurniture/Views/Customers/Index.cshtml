@@ -1,0 +1,79 @@
+﻿@model IEnumerable<S1G6_PVFAPP.Models.Customer>
+
+@{
+    ViewBag.Title = "Index";
+}
+    <div class="container">
+        <h2>Index</h2>
+
+        <p>
+            @Html.ActionLink("Create New", "Create")
+        </p>
+
+        <div class="input-group mb-6">
+
+            @using (Html.BeginForm("Index", "Customers", FormMethod.Get))
+            {
+                <form action="/Customers" method="get">
+                    <input class="SearchText" placeholder="CustomerName" name="SearchString" id="SearchString" type="text" value="">
+                    <button class="btn" type="submit" id="" value="Search">Search</button>
+                </form>
+            }
+        </div>
+        <br />
+
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.ActionLink("Customer Name", "Index", new { sortOrder = ViewBag.NameSortParm })
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CustomerAddress)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CustomerPostalCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CustomerPhone)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CustomerEmailID)
+                </th>
+                <th>
+                    @Html.ActionLink("Customer City", "Index", new { sortOrder = ViewBag.SupervisorParm })
+                </th>
+                
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerPostalCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerPhone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerEmailID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerCity)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+            }
+
+        </table>
+    </div>

@@ -1,0 +1,83 @@
+﻿@model IEnumerable<S1G6_PVFAPP.Models.Employee>
+
+@{
+    ViewBag.Title = "Index";
+}
+    <div class="container">
+        <h2>Index</h2>
+
+        <p>
+            @Html.ActionLink("Create New", "Create")
+        </p>
+
+        <div class="input-group mb-6">
+
+            @using (Html.BeginForm("Index", "Employees", FormMethod.Get))
+            {
+                <form action="/Employees" method="get">
+                    <input class="SearchText" placeholder="EmployeeName" name="SearchString" id="SearchString" type="text" value="">
+                    <button class="btn" type="submit" id="" value="Search">Search</button>
+                </form>
+            }
+        </div>
+        <br />
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.ActionLink("Employee Name", "Index", new { sortOrder = ViewBag.NameSortParm })
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.EmployeeAddress)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.EmployeePhone)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.EmployeeEmailID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.EmployeeGender)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.EmployeeDesignation)
+                </th>
+                <th>
+                    @Html.ActionLink("Supervisor Id", "Index", new { sortOrder = ViewBag.SupervisorParm })
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.EmployeeName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.EmployeeAddress)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.EmployeePhone)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.EmployeeEmailID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.EmployeeGender)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.EmployeeDesignation)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SupervisorID)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.EmployeeID }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.EmployeeID }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.EmployeeID })
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>

@@ -1,0 +1,50 @@
+﻿@model S1G6_PVFAPP.Models.RawMaterial
+
+@{
+    ViewBag.Title = "Delete";
+}
+    <div class="container">
+        <h2>Delete</h2>
+
+        <h3>Are you sure you want to delete this?</h3>
+        <div>
+            <h4>RawMaterial</h4>
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.RawMaterialName)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.RawMaterialName)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.RawMaterialStandardCost)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.RawMaterialStandardCost)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.RawMaterialUnitofMeasure)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.RawMaterialUnitofMeasure)
+                </dd>
+
+            </dl>
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-actions no-color">
+                    <input type="submit" value="Delete" class="btn btn-default" /> |
+                    @Html.ActionLink("Back to List", "Index")
+                </div>
+            }
+        </div>
+       </div>

@@ -1,0 +1,650 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{91CF96F5-B071-4E56-AA97-68E1955B9519}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>S1G6_PVFAPP</RootNamespace>
+    <AssemblyName>S1G6-PVFAPP</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CustomersController.cs" />
+    <Compile Include="Controllers\EmployeesController.cs" />
+    <Compile Include="Controllers\EmployeeSkillsController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\OrdersController.cs" />
+    <Compile Include="Controllers\ProductsController.cs" />
+    <Compile Include="Controllers\RawMaterialsController.cs" />
+    <Compile Include="Controllers\SalesPersonsController.cs" />
+    <Compile Include="Controllers\TerritoriesController.cs" />
+    <Compile Include="Controllers\VendorsController.cs" />
+    <Compile Include="Controllers\WorkCentersController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Customer.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DoesBusinessIn.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Employee.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EmployeeSkill.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\HasSkill.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Order.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OrderLine.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProducedIn.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Product.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductLine.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PVFModel1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PVFModel1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PVFModel1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PVFModel1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PVFModel1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RawMaterial.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SalesPerson.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Supply.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblAttribute.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblAttributeGroup.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblAttributeGroupDetail.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblBRBusinessRule.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblBRItem.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblBRItemProperty.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblBRItemTypeAppliesTo.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblBRLogicalOperatorGroup.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblBRStatusTransition.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblCodeGenInfo.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblDataQualityOperationsState.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblDBError.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblDBUpgradeHistory.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblDerivedHierarchy.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblDerivedHierarchyDetail.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblEntity.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblErrorCodesMapping.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblEvent.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblExternalSystem.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblFile.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblHierarchy.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblIndex.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblList.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblListRelationship.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblListRelationshipType.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblLocalizedString.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblModel.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblModelVersion.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblModelVersionFlag.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblNotificationQueue.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblNotificationUser.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblSecurityAccessControl.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblSecurityObject.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblSecurityPrivilege.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblSecurityPrivilegeFunctional.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblSecurityRole.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblSecurityRoleAccess.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblSecurityRoleAccessFunctional.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblSecurityRoleAccessMember.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblStgBatch.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblStgErrorDetail.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblSubscriptionView.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblSyncRelationship.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblSystem.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblSystemSetting.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblSystemSettingGroup.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblUser.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblUserGroup.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblUserGroupAssignment.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblUserPreference.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Territory.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Us.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Vendor.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\viw_EntityStagingBatchesAllProcessed.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\viw_EntityStagingBatchesAllProcessedExceptCleared.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\viw_SYSTEM_BUSINESSRULES_ATTRIBUTE_INHERITANCE_HIERARCHY.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\viw_SYSTEM_BUSINESSRULES_HIERARCHY_CHANGEVALUE_INHERITANCE.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\viw_SYSTEM_SCHEMA_ATTRIBUTEGROUPS.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\viw_SYSTEM_SCHEMA_ATTRIBUTES.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\viw_SYSTEM_SCHEMA_BUSINESSRULES.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\viw_SYSTEM_SCHEMA_BUSINESSRULE_ITEMTYPES.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\viw_SYSTEM_SCHEMA_BUSINESSRULE_PROPERTIES.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\viw_SYSTEM_SCHEMA_BUSINESSRULE_PROPERTIES_ATTRIBUTES.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\viw_SYSTEM_SCHEMA_ENTITY.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\viw_SYSTEM_SCHEMA_ENTITY_MEMBERTYPE.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\viw_SYSTEM_SCHEMA_HIERARCHY_DERIVED.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\viw_SYSTEM_SCHEMA_HIERARCHY_DERIVED_LEVELS.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\viw_SYSTEM_SCHEMA_HIERARCHY_EXPLICIT.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\viw_SYSTEM_SCHEMA_INDEXES.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\viw_SYSTEM_SCHEMA_MODEL.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\viw_SYSTEM_SCHEMA_MODELS.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\viw_SYSTEM_SCHEMA_SYSTEMSETTINGS.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\viw_SYSTEM_SCHEMA_VERSION.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\viw_SYSTEM_SCHEMA_VERSION_FLAGS.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\viw_SYSTEM_SECURITY_ROLE.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\viw_SYSTEM_SECURITY_ROLE_ACCESSCONTROL.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\viw_SYSTEM_SECURITY_ROLE_ACCESSCONTROL_FUNCTIONAL.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\viw_SYSTEM_SECURITY_ROLE_ACCESSCONTROL_MEMBER.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\viw_SYSTEM_SECURITY_ROLE_MEMBER.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\viw_SYSTEM_SECURITY_USER.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\viw_SYSTEM_SECURITY_USER_ATTRIBUTE.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\viw_SYSTEM_SECURITY_USER_ATTRIBUTEGROUP.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\viw_SYSTEM_SECURITY_USER_ENTITY.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\viw_SYSTEM_SECURITY_USER_FUNCTION.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\viw_SYSTEM_SECURITY_USER_HIERARCHY.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\viw_SYSTEM_SECURITY_USER_HIERARCHY_DERIVED.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\viw_SYSTEM_SECURITY_USER_INDEX.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\viw_SYSTEM_SECURITY_USER_MEMBER.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\viw_SYSTEM_SECURITY_USER_MEMBERTYPE.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\viw_SYSTEM_SECURITY_USER_MODEL.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\viw_SYSTEM_SECURITY_USER_ROLE.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\viw_SYSTEM_USERGROUP_USERS.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\viw_SYSTEM_VERSION.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WorkCenter.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WorksIn.cs">
+      <DependentUpon>PVFModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Models\PVFModel1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PVFModel1.edmx</DependentUpon>
+      <LastGenOutput>PVFModel1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\PVFModel1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PVFModel1.edmx</DependentUpon>
+      <LastGenOutput>PVFModel1.cs</LastGenOutput>
+    </Content>
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <EntityDeploy Include="Models\PVFModel1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>PVFModel1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\PVFModel1.edmx.diagram">
+      <DependentUpon>PVFModel1.edmx</DependentUpon>
+    </Content>
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Customers\Create.cshtml" />
+    <Content Include="Views\Customers\Delete.cshtml" />
+    <Content Include="Views\Customers\Details.cshtml" />
+    <Content Include="Views\Customers\Edit.cshtml" />
+    <Content Include="Views\Customers\Index.cshtml" />
+    <Content Include="Views\Employees\Create.cshtml" />
+    <Content Include="Views\Employees\Delete.cshtml" />
+    <Content Include="Views\Employees\Details.cshtml" />
+    <Content Include="Views\Employees\Edit.cshtml" />
+    <Content Include="Views\Employees\Index.cshtml" />
+    <Content Include="Views\EmployeeSkills\Create.cshtml" />
+    <Content Include="Views\EmployeeSkills\Delete.cshtml" />
+    <Content Include="Views\EmployeeSkills\Details.cshtml" />
+    <Content Include="Views\EmployeeSkills\Edit.cshtml" />
+    <Content Include="Views\EmployeeSkills\Index.cshtml" />
+    <Content Include="Views\Orders\Create.cshtml" />
+    <Content Include="Views\Orders\Delete.cshtml" />
+    <Content Include="Views\Orders\Details.cshtml" />
+    <Content Include="Views\Orders\Edit.cshtml" />
+    <Content Include="Views\Orders\Index.cshtml" />
+    <Content Include="Views\Products\Create.cshtml" />
+    <Content Include="Views\Products\Delete.cshtml" />
+    <Content Include="Views\Products\Details.cshtml" />
+    <Content Include="Views\Products\Edit.cshtml" />
+    <Content Include="Views\Products\Index.cshtml" />
+    <Content Include="Views\RawMaterials\Create.cshtml" />
+    <Content Include="Views\RawMaterials\Delete.cshtml" />
+    <Content Include="Views\RawMaterials\Details.cshtml" />
+    <Content Include="Views\RawMaterials\Edit.cshtml" />
+    <Content Include="Views\RawMaterials\Index.cshtml" />
+    <Content Include="Views\SalesPersons\Create.cshtml" />
+    <Content Include="Views\SalesPersons\Delete.cshtml" />
+    <Content Include="Views\SalesPersons\Details.cshtml" />
+    <Content Include="Views\SalesPersons\Edit.cshtml" />
+    <Content Include="Views\SalesPersons\Index.cshtml" />
+    <Content Include="Views\Vendors\Create.cshtml" />
+    <Content Include="Views\Vendors\Delete.cshtml" />
+    <Content Include="Views\Vendors\Details.cshtml" />
+    <Content Include="Views\Vendors\Edit.cshtml" />
+    <Content Include="Views\Vendors\Index.cshtml" />
+    <Content Include="Views\Territories\Create.cshtml" />
+    <Content Include="Views\Territories\Delete.cshtml" />
+    <Content Include="Views\Territories\Details.cshtml" />
+    <Content Include="Views\Territories\Edit.cshtml" />
+    <Content Include="Views\Territories\Index.cshtml" />
+    <Content Include="Views\WorkCenters\Create.cshtml" />
+    <Content Include="Views\WorkCenters\Delete.cshtml" />
+    <Content Include="Views\WorkCenters\Details.cshtml" />
+    <Content Include="Views\WorkCenters\Edit.cshtml" />
+    <Content Include="Views\WorkCenters\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Views\Default\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50440</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50440/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
