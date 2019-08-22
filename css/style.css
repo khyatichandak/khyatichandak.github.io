@@ -1400,7 +1400,7 @@ body.offcanvas .colorlib-nav-toggle {
     color: #000;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 400px) {
     .project .desc {
         opacity: 1;
         background: rgba(0, 0, 0, 0.4);
