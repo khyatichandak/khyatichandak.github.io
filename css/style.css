@@ -2014,3 +2014,12 @@ body.offcanvas .colorlib-nav-toggle {
 .js .animate-box {
     opacity: 0;
 }
+
+.card-deck {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card, .card-header { 
+    border-radius: 0px !important;
+}
