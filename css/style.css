@@ -2023,3 +2023,11 @@ body.offcanvas .colorlib-nav-toggle {
 .card, .card-header { 
     border-radius: 0px !important;
 }
+
+.bg-blue{
+    background-color: #2c98f0;
+}
+
+.border-blue{
+    border-color: #2c98f0;
+}
