@@ -113,6 +113,7 @@ figure figcaption {
     -webkit-transition: 0.5s;
     -o-transition: 0.5s;
     transition: 0.5s;
+    height: 100vh;
 }
 
 @media screen and (max-width: 768px) {
@@ -2030,4 +2031,19 @@ body.offcanvas .colorlib-nav-toggle {
 
 .border-blue{
     border-color: #2c98f0;
+}
+
+.svg-inline--fa{
+    font-size: 35px;
+    color: #2c98f0;
+}
+
+.card-body .svg-inline--fa{
+    color:#4054b2;
+}
+
+.colorlib-skills .card{
+    border: none;
+    box-shadow: 0px 0px 56px -8px rgba(0, 0, 0, 0.17);
+    margin-bottom: 35px;
 }
